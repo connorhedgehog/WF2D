@@ -16,10 +16,6 @@ run/main_scene="res://Scenes/mp_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Sprites/icon.svg"
 
-[autoload]
-
-MultiplayerManager="*res://Scripts/multiplayer_manager.gd"
-
 [display]
 
 window/size/viewport_width=640
