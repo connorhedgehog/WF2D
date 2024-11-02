@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://dg75k2udu27ca"]
+[gd_scene load_steps=26 format=3 uid="uid://dg75k2udu27ca"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_qjgs8"]
 [ext_resource type="Texture2D" uid="uid://cwqk4o2y7ku5s" path="res://Sprites/ph_player.png" id="2_3kpwt"]
+[ext_resource type="PackedScene" uid="uid://dl6afb3hh1xcn" path="res://Scenes/TestGUI.tscn" id="3_3lf4h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wq4d"]
 atlas = ExtResource("2_3kpwt")
@@ -190,6 +191,18 @@ animations = [{
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
+properties/1/path = NodePath("AnimatedSprite2D:animation")
+properties/1/spawn = true
+properties/1/replication_mode = 2
+properties/2/path = NodePath("AnimatedSprite2D:speed_scale")
+properties/2/spawn = true
+properties/2/replication_mode = 2
+properties/3/path = NodePath("AnimatedSprite2D:frame")
+properties/3/spawn = true
+properties/3/replication_mode = 2
+properties/4/path = NodePath("Label:text")
+properties/4/spawn = true
+properties/4/replication_mode = 2
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_qjgs8")
@@ -200,3 +213,17 @@ animation = &"idle_down"
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_vtbn3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -24.0
+offset_top = -22.0
+offset_right = 24.0
+offset_bottom = -8.0
+theme_override_font_sizes/font_size = 10
+text = "Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="TestGui" parent="." instance=ExtResource("3_3lf4h")]
+visible = false
