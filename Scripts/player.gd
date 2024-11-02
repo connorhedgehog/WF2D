@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var camera: Camera2D = $Camera
 @onready var test_gui: Control = $TestGui
 
 var speed = 50
@@ -8,6 +9,10 @@ var frozen = false
 
 func _enter_tree():
 	set_multiplayer_authority(name.to_int())
+	
+func _ready() -> void:
+	if is_multiplayer_authority():
+		$Camera.make_current()
 
 func _physics_process(_delta):	
 	if is_multiplayer_authority():
