@@ -9,8 +9,6 @@ func _enter_tree():
 
 func _physics_process(_delta):	
 	if is_multiplayer_authority():
-		if not name == "1":
-			print("WOAH!")
 		var direction = Input.get_vector("left", "right", "up", "down")
 		if Input.is_action_pressed("sprint"):
 			velocity = direction * (speed * 1.5)
@@ -32,5 +30,5 @@ func _physics_process(_delta):
 #		else:
 #			$AnimatedSprite2D.play("idle_" + sprite_direction)
 			
-	move_and_slide()
+		move_and_slide()
 	
