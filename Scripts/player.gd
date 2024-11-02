@@ -4,9 +4,10 @@ var speed = 50
 var sprite_direction = "down"
 
 func _enter_tree():
+	print(name)
 	set_multiplayer_authority(name.to_int())
 
-func _physics_process(_delta):
+func _physics_process(_delta):	
 	if is_multiplayer_authority():
 		var direction = Input.get_vector("left", "right", "up", "down")
 		if Input.is_action_pressed("sprint"):
@@ -29,5 +30,5 @@ func _physics_process(_delta):
 #		else:
 #			$AnimatedSprite2D.play("idle_" + sprite_direction)
 			
-	move_and_slide()
+		move_and_slide()
 	

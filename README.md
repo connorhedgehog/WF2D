@@ -1,2 +1,2 @@
 # WF2D
-Main, non-multiplayer branch.
+A 2D Godot game.
