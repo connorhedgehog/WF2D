@@ -1,14 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjh1qixjivafg"]
+[gd_scene load_steps=3 format=3 uid="uid://bjh1qixjivafg"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_hfftx"]
+[ext_resource type="Texture2D" uid="uid://b5813d1qttn28" path="res://Sprites/icon.svg" id="2_frvvo"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_hfftx")
 
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2(213, 120)
-zoom = Vector2(1.5, 1.5)
-
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("res://Scenes/player.tscn")
 spawn_path = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(175, 72)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(176, 110)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(249, 71)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(252, 108)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(301, 80)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(302, 118)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(175, 171)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(172, 214)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(250, 167)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(251, 206)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(300, 214)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(341, 214)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_frvvo")
