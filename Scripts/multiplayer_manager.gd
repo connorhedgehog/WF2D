@@ -13,6 +13,5 @@ func join():
 	
 func add_player(id = 1):
 	var player = player_scene.instantiate()
-	print(id)
 	player.name = str(id)
 	call_deferred("add_child", player)
